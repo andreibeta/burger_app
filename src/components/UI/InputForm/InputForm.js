@@ -1,10 +1,10 @@
 import React from 'react';
-import classes from './InputForm.module.css'
+
 const inputForm = (props) => {
     let inputElement = null;
-    const inputClasses = [classes.InputElement];//allocate it to a variable
+    const inputClasses = ["InputElement"];//allocate the sass class properties to a variable
     if(props.invalid && props.shouldValidate && props.touched){
-        inputClasses.push(classes.Invalid);
+        inputClasses.push("Invalid");
     }
     switch(props.elementType) {
         case ('input'):
@@ -40,8 +40,8 @@ const inputForm = (props) => {
                 onChange={props.changed}/>;
     }
     return(
-        <div className={classes.InputForm}>
-            <label className={classes.Label}>{props.label}</label>
+        <div className="InputForm">
+            <label className="Label">{props.label}</label>
             {inputElement}
         </div>
     );

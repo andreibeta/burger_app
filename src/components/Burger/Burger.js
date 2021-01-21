@@ -1,5 +1,4 @@
 import React from 'react';
-import classes from './Burger.module.css';
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient'
 const burger = (props) => {
     //turns that object into an array, in our case the ingredients which are an object
@@ -18,7 +17,7 @@ const burger = (props) => {
     }
     console.log(transformedIngredients);
     return(
-        <div className={classes.Burger}>
+        <div className="Burger">
             <BurgerIngredient type="bread-top"/>
             {transformedIngredients}
             <BurgerIngredient type="bread-bottom"/>
