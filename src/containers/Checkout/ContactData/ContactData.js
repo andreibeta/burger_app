@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Button from '../../../components/UI/Button/Button';
-import classes from './ContactData.module.css';
 import axios from '../../../axios-orders';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 import InputForm from '../../../components/UI/InputForm/InputForm';
@@ -148,7 +147,7 @@ class ContactData extends Component{
     }
     
     render(){
-        //this is where we converted the state object to an array we can loop trough
+        //this is where we convert the state object to an array we can loop trough
         const formElementsArray = [];
         //key=name,street,zip etc...
         for(let key in this.state.orderForm){
@@ -177,7 +176,7 @@ class ContactData extends Component{
             form = <Spinner />
         }
         return(
-            <div className={classes.ContactData}>
+            <div className="ContactData">
                 <h4>Enter your contact data</h4>
                 {form}
             </div>

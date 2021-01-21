@@ -1,5 +1,4 @@
 import React from 'react';
-import classes from './BuildControls.module.css';
 import BuildControl from './BuildControl/BuildControl';
 
 const controls = [
@@ -10,7 +9,7 @@ const controls = [
 ];
 //disabled ={props.disabled[ctrl]} we want to disable only one of control type using this way with props.disabled[ctrl]
 const buildControls = (props) => (
-    <div className={classes.BuildControls}>
+    <div className="BuildControls">
         <p>Current Price: <strong>{props.price.toFixed(2)}</strong></p>
         {controls.map(ctrl => (
             <BuildControl 
@@ -21,7 +20,7 @@ const buildControls = (props) => (
             disabled ={props.disabled[ctrl.type]} />
         ))}
         <button 
-        className={classes.OrderButton}
+        className="OrderButton"
         disabled={!props.purchaseable}
         onClick={props.order}>{props.isAuth ? 'ORDER NOW' : 'SIGN UP TO ORDER'}</button>
     </div>

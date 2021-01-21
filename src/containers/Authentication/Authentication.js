@@ -1,7 +1,6 @@
 import React , { Component } from 'react';
 import InputForm from '../../components/UI/InputForm/InputForm';
 import Button from '../../components/UI/Button/Button';
-import classes from './Authentication.module.css';
 import * as actions from '../../store/actions/index';
 import { connect } from 'react-redux';
 import Spinner from '../../components/UI/Spinner/Spinner';
@@ -129,7 +128,7 @@ class Authentication extends Component {
             authRedirect = <Redirect to={this.props.authRedirectPath} />
          }
         return(
-            <div className={classes.Authentication}>
+            <div className="Authentication">
                 {authRedirect}
                 {errorMessage}
                 <form onSubmit = {this.submitHandler}>
