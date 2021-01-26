@@ -2,6 +2,7 @@
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
+    
 }
 
 .Label {
@@ -19,15 +20,17 @@
     display: block;
     width: 100%;
     box-sizing: border-box;
+    
 
 }
 
 .InputElement:focus{
     outline:none;
     background-color: #ccc;
+    border-bottom: 1.5px solid #5c9210;
 }
 
 .Invalid{
-    border: 1px solid red;
+    border-bottom: 1.5px solid #944317;
     background-color: salmon;
 }

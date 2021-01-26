@@ -22,6 +22,25 @@
     color:#944317;
 }
 
+.Success-v2{
+    color:#5c9210;
+    border: 1px solid #5c9210;
+    border-radius: 1rem;
+}
+.Success-v2:hover{
+    color: whitesmoke;
+    background-color:#5c9210;
+}
+.Danger-v2{
+    color:#944317;
+    border: 1px solid #944317;
+    border-radius: 1rem;
+}
+.Danger-v2:hover{
+    color: whitesmoke;
+    background-color: #944317;
+}
+
 .Button:disabled{
     color:#ccc;
     cursor:not-allowed;

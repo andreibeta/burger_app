@@ -4,7 +4,7 @@ import Button from '../../components/UI/Button/Button';
 import * as actions from '../../store/actions/index';
 import { connect } from 'react-redux';
 import Spinner from '../../components/UI/Spinner/Spinner';
-import { Redirect } from 'react-router-dom';
+import { Redirect,Link } from 'react-router-dom';
 
 class Authentication extends Component {
     state = {
@@ -128,16 +128,21 @@ class Authentication extends Component {
             authRedirect = <Redirect to={this.props.authRedirectPath} />
          }
         return(
+            <div className="container">
             <div className="Authentication">
                 {authRedirect}
                 {errorMessage}
-                <form onSubmit = {this.submitHandler}>
+                <h2>{this.state.isSignUp ? 'REGISTER' : 'SIGN IN'}</h2>
+                <form className="authenticationForm" onSubmit = {this.submitHandler}>
+                    
                     {form}
-                    <Button buttonType ="Success" >SUBMIT</Button>
+                    <Button className="authenticationForm__button" buttonType ="Success-v2" >SUBMIT</Button>
+                    <Link className="authenticationForm__link" to="/forgot/password">Forgot Password?</Link>
                 </form>
                 <Button 
                     clicked = {this.switchAuthModeHanlder}
-                    buttonType="Danger">Switch to {this.state.isSignUp ? 'SIGN IN' : 'SIGN UP'}</Button>
+                    buttonType="Danger-v2">Switch to {this.state.isSignUp ? 'SIGN IN' : 'REGISTER'}</Button>
+            </div>
             </div>
         );
     }

@@ -6,6 +6,7 @@ import Logout from './containers/Authentication/Logout/Logout';
 import { connect } from 'react-redux';
 import * as actions from './store/actions/index';
 import asyncComponent from './hoc/asyncComponent/asyncComponent';
+import ForgotPassword from './containers/Authentication/ForgotPassword';
 
 
 
@@ -30,6 +31,7 @@ class App extends Component {
       //routing setup for unauthenticated users
       let routes =(
         <Switch>
+            <Route path ="/forgot/password" component={ForgotPassword} />
             <Route path = "/auth" component={asyncAuthentication} />
             <Route path = "/" exact component={BurgerBuilder} />
             {/* for anything unknown go to the homepage */}
@@ -51,11 +53,10 @@ class App extends Component {
         );
       }
       return (
-        <div>
           <Layout>
             {routes}
           </Layout>
-        </div>
+        
       );
       }
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import classes from './Order.module.css';
 
 const order = (props) => {
     const ingredients = [];
@@ -11,19 +10,19 @@ const order = (props) => {
     }
 
     const ingredientOutput = ingredients.map( ig => {
-        return <span
-        style={{textTransform: 'capitalize',
-                display:'inline-block',
-                margin:'0 8px',
-                border:'1px solid #ccc',
-                padding:'5px'
-                }} 
-        key={ig.name}>{ig.name} ({ig.amount}) </span>
+        return <span className={ig.name} key={ig.name}>{ig.name} ({ig.amount}) </span>
+        
     })
     return(
-        <div className={classes.Order}>
-            <p>Ingredients: {ingredientOutput}</p>
-            <p>Price: <strong>USD {Number.parseFloat(props.price).toFixed(2)}</strong></p>
+        <div className="Order">
+            <div className="Order__ingredients">
+            <h4>Ingredients</h4>
+            <p>{ingredientOutput}</p>
+            </div>
+            <div className="Order__price">
+            <h4>Price</h4>
+            <p> <strong>USD {Number.parseFloat(props.price).toFixed(2)}</strong></p>
+            </div>
         </div>
     );
 };

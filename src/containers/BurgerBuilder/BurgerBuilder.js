@@ -60,23 +60,46 @@ export class BurgerBuilder extends Component{
         });
     }
 
+    purchaseMoreButton = () => {
+        const disableMore = this.props.ingr;
+        for(let i in disableMore){
+
+        }
+    }
+
     render(){
         const disabledInfo = {
             //...this.state.ingredients
             ...this.props.ingr
         };
+        
         //this would return a value with true/false state
         for( let i in disabledInfo){
             disabledInfo[i] = disabledInfo[i] <= 0;
         }
+        console.log("disabledInfo",disabledInfo);
+        
+        // const disabledMore = this.props.ingr;
+        // for(let i in disabledMore){
+        //     disabledMore[i] = disabledMore[i] >=2;
+        // }
+        // console.log("disabledMore",disabledMore);
         //it will return in this way
         //{salad:true, meat: false .....}
-       
+        
             
         
         let burger = this.props.error ? <p>Ingredients can't be loaded</p> : <Spinner />;
         let orderSummary = null;
-
+        console.log("ingredients:",this.props.ingr);
+        const disabledMore = {...this.props.ingr};
+        for(let i in disabledMore){
+            disabledMore[i] = disabledMore[i] >= 2;
+            // if(disabledMore[i] === 3){
+            //     disabledMore[i] = true;
+            // }
+        }
+         console.log("disabledMore",disabledMore)
         if(this.props.ingr !== null){
         burger = (
             <Aux>
@@ -85,6 +108,7 @@ export class BurgerBuilder extends Component{
                     ingredientAdded={this.props.onIngredientAdded}
                     ingredientRemoved={this.props.onIngredientRemoved}
                     disabled={disabledInfo}
+                    disabledMore={disabledMore}
                     // price={this.state.totalPrice}
                     price = {this.props.price}
                     purchaseable={this.updatePurchaseState(this.props.ingr)}
