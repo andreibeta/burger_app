@@ -1,14 +1,15 @@
 import React from 'react';
 const buildControl = (props) => (
     <div className="BuildControl">
-        <div className="Label">{props.label}</div>
+        <div className="BuildControl__Label">{props.label}</div>
         <button 
-        className="Less" 
+        className="BuildControl__Less" 
         onClick={props.removed}
         disabled={props.disabled}>Less</button>
         <button 
-        className="More" 
+        className="BuildControl__More" 
         onClick={props.added}
+        disabled={props.disabledMore}
         >More</button>
     </div>
 )

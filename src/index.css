@@ -1,5 +1,23 @@
+html{
+  font-size: 62.5%;/*default is 16px * 62.5  10px = 1 rem */
+  box-sizing: border-box;
+}
+html, 
+body {
+    height: 100%;
+}
 body {
   margin:0;
   padding: 0;
-  font-family: "Open Sans";
+  font:1.6rem Arial;
+
 }
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
+/* .full-width{
+  width: 100%;
+} */

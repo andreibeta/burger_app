@@ -1,0 +1,43 @@
+.Order {
+    width: 80%;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px;
+    padding: 10px;
+    margin: .5rem auto;
+    box-sizing: border-box;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-between;
+}
+span{
+    text-transform: capitalize;
+    display:inline-block;
+    margin:0 8px;
+    border:1px solid #ccc;
+    padding:.6rem;
+    border-radius: .5rem;
+}
+h4{
+    margin:0 8px;
+    padding: .5rem;
+    text-align: center;
+    
+}
+span.bacon{
+    background-color:#A85D5E ;
+    color: whitesmoke;
+}
+span.cheese{
+
+    background-color:#B8B81D ;
+    color: whitesmoke;
+}
+
+span.meat{
+    background-color:#78360B ;
+    color: whitesmoke;
+}
+span.salad{
+    background-color:#305204 ;
+    color: whitesmoke;
+}
