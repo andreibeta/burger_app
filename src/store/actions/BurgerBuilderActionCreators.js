@@ -40,3 +40,12 @@ export const initIngredients = () => {
             });
     };
 };
+
+// export const initIngredients = () => async(dispatch) => {
+//     try{
+//         const { data } = await axios.get('https://react-my-burger-b6392.firebaseio.com/ingredients.json');
+//         dispatch({type:actionTypes.SET_INGREDIENTS,payload:data});
+//     }catch(error){
+//         dispatch({type:actionTypes.FETCH_INGREDIENTS_FAILED,payload:error.message});
+//     }
+// }
