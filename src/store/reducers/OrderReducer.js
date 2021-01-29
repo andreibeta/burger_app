@@ -48,7 +48,7 @@ const reducer = (state = initialState, action) =>{
             //here i want to store the orders i fetched
             return {
                 ...state,
-                orders:action.orders,
+                orders:action.payload,
                 purchaseStatus: false,
 
             }

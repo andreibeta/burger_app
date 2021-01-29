@@ -46,29 +46,10 @@ export const purchaseRedirect = () => {
     };
 };
 
-export const fetchOrdersSuccess = (orders) =>{
-    return{
-        type: actionTypes.FETCH_ORDERS_SUCCESS,
-        orders: orders
-    }
-}
-
-export const fetchOrdersFailed = (error) =>{
-    return{
-        type:actionTypes.FETCH_ORDERS_FAILED,
-        error: error
-    }
-};
-
-export const fetchOrderStart = () => {
-    return{
-        type:actionTypes.FETCH_ORDERS_START
-    };
-};
 
 export const fetchOrders = (token, userId) => {
     return dispatch => {
-        dispatch(fetchOrderStart());
+        dispatch({type:actionTypes.FETCH_ORDERS_START,payload:{token,userId}});
         const queryParams = '?auth=' + token + '&orderBy="userId"&equalTo="' + userId + '"';
         axios.get('/orders.json' + queryParams )
                     .then(response => {
@@ -80,11 +61,13 @@ export const fetchOrders = (token, userId) => {
                             });
                         }
                         console.log(response.data);
-                        dispatch(fetchOrdersSuccess(fetchedOrders));
-                        
+                        //dispatch(fetchOrdersSuccess(fetchedOrders));
+                        dispatch({type:actionTypes.FETCH_ORDERS_SUCCESS,payload:fetchedOrders});
                     })
                     .catch(error => {
-                        dispatch(fetchOrdersFailed(error));
+                        //dispatch(fetchOrdersFailed(error));
+                        dispatch({type:actionTypes.FETCH_ORDERS_FAILED,payload:error.message});
                     });
     }
 }
+

@@ -17,7 +17,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
   burgerBuilder: BurgerBuilderReducer,
-  order: OrderReducer,
+  ordersList: OrderReducer,
   authentication: AuthenticationReducer
 });
 
