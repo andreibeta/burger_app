@@ -18,19 +18,26 @@ export const purchaseBurgerFailed =(error) => {
     };
 }
 
-export const purchaseBurgerBegin = (orderData, token) => {
-    return dispatch => {
-        //we want to return if purchaseBurgerStartProcess is dispatched through the store
-        dispatch(purchaseBurgerStartProcess());
-        axios.post('/orders.json?auth='+ token, orderData)
-        .then(response => {
-            console.log(response.data.name);
-            //according to redux devtools response.data.name is the id that we want to store
-            dispatch(purchaseBurgerSuccess(response.data.name, orderData));
-        })
-        .catch(error=> {
-            dispatch(purchaseBurgerFailed(error))
-        });
+export const purchaseBurgerBegin = (orderData, token) => async(dispatch)=> {
+    // return dispatch => {
+    //     //we want to return if purchaseBurgerStartProcess is dispatched through the store
+    //     dispatch(purchaseBurgerStartProcess());
+    //     axios.post('/orders.json?auth='+ token, orderData)
+    //     .then(response => {
+    //         console.log(response.data.name);
+    //         //according to redux devtools response.data.name is the id that we want to store
+    //         dispatch(purchaseBurgerSuccess(response.data.name, orderData));
+    //     })
+    //     .catch(error=> 
+    //         dispatch(purchaseBurgerFailed(error))
+    //     });
+    // }
+    try{
+    dispatch({type:actionTypes.PURCHASE_BURGER_START_PROCESS});
+    const {data} = axios.post('orders.json?auth='+token,orderData);
+    dispatch({type:actionTypes.PURCHASE_BURGER_SUCCESS,orderData:data});
+    }catch(error){
+        dispatch({type:actionTypes.PURCHASE_BURGER_FAILED,error:error.message});
     }
 }
 

@@ -8,6 +8,11 @@
     border-radius: .5rem;
     display: flex;
     justify-content: space-between;
+    @media only screen and(max-width: $bp-smallest){
+        flex-direction: column;
+        align-content: center;
+        align-items: center;    
+     }
 }
 span{
     text-transform: capitalize;
@@ -15,6 +20,8 @@ span{
     margin:0 8px;
     border:1px solid #ccc;
     padding:.6rem;
+    text-align: center;
+    min-width: 10rem;
     border-radius: .5rem;
 }
 h4{

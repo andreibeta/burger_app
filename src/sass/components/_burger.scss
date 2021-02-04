@@ -1,35 +1,55 @@
 .Burger {
-    margin: 5rem auto;
+    margin: 4rem auto;
     text-align: center;
     font-weight: bold;
     font-size: 1.2rem;
     flex:1 40%;
-}
-
-@media(min-width:1000px) and (min-height: 700px){
-    .Burger{
-        width: 700px;
-        height: 600px;
+    height: 12vh;
+    @media only screen and (min-width:$bp-largest) {
+        width: 25%;
+    }
+    @media only screen and (max-width:$bp-largest) {
+        width: 30%;
+    }
+    @media only screen and (max-width:$bp-large) {
+        width: 35%;
+    }
+    @media only screen and (max-width:$bp-medium) {
+        width: 45%;
+    }
+    @media only screen and (max-width:$bp-small) {
+        width: 50%;
+    }
+    @media only screen and(max-width: $bp-smallest){
+        width: 65%;    
     }
 }
 
-@media(min-width:500px) and (min-height: 400px){
-    .Burger{
-        width: 350px;
-        height: 300px;
-    }
-}
 
-@media(min-width:500px) and (min-height: 401px){
-    .Burger{
-        width: 450px;
-        height: 400px;
-    }
-}
+// @media(min-width:1000px) and (min-height: 700px){
+//     .Burger{
+//         width: 700px;
+//         height: 600px;
+//     }
+// }
 
-@media(min-width:350px) and (min-height: 300px){
-    .Burger{
-        width: 300px;
-        height: 250px;
-    }
-}
+// @media(min-width:500px) and (min-height: 400px){
+//     .Burger{
+//         width: 350px;
+//         height: 300px;
+//     }
+// }
+
+// @media(min-width:500px) and (min-height: 401px){
+//     .Burger{
+//         width: 450px;
+//         height: 400px;
+//     }
+// }
+
+// @media(min-width:350px) and (min-height: 300px){
+//     .Burger{
+//         width: 25%;
+//         height: 10vh;
+//     }
+// }
