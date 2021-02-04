@@ -3,11 +3,12 @@ import Button from '../../../components/UI/Button/Button';
 import axios from '../../../axios-orders';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 import InputForm from '../../../components/UI/InputForm/InputForm';
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 import withErrorHandler from '../../../hoc/withErrorHandler/withErrorHandler';
 import * as OrderActionCreators from '../../../store/actions/index';
 
 class ContactData extends Component{
+    
     state = {
         orderForm: {
                 name: {
@@ -188,7 +189,7 @@ const mapStateToProps = state => {
     return {
         ingr: state.burgerBuilder.ingredients,
         price: state.burgerBuilder.totalPrice,
-        loading: state.order.purchaseStatus,
+        loading: state.ordersList.purchaseStatus,
         token: state.authentication.token,
         userId: state.authentication.userId
     }
