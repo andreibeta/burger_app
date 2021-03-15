@@ -14,7 +14,10 @@
         align-items: center;    
      }
 }
-span{
+.bacon,
+.cheese,
+.meat,
+.salad{
     text-transform: capitalize;
     display:inline-block;
     margin:0 8px;
@@ -23,6 +26,8 @@ span{
     text-align: center;
     min-width: 10rem;
     border-radius: .5rem;
+    letter-spacing: .1rem;
+    font-weight: 550;
 }
 h4{
     margin:0 8px;
@@ -31,20 +36,20 @@ h4{
     
 }
 span.bacon{
-    background-color:#A85D5E ;
+    background-color:#b41f1f ;
     color: whitesmoke;
 }
 span.cheese{
 
-    background-color:#B8B81D ;
+    background-color:#ffa600 ;
     color: whitesmoke;
 }
 
 span.meat{
-    background-color:#78360B ;
+    background-color:#f9906f ;
     color: whitesmoke;
 }
 span.salad{
-    background-color:#305204 ;
+    background-color:#4EB748 ;
     color: whitesmoke;
 }

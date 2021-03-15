@@ -6,7 +6,7 @@ import * as actions from '../../store/actions/index';
 import { connect, useDispatch, useSelector } from 'react-redux';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import {fetchOrders} from '../../store/actions/OrderActionCreators';
-import order from "../../components/Order/Order";
+
 
 function Orders(props){
 
@@ -33,6 +33,7 @@ function Orders(props){
             key={order.id}
             ingredients = {order.ingredients}
             price = {order.price}
+            times
              />
         ))}
         </div>

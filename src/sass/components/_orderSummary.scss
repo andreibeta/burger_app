@@ -1,0 +1,17 @@
+.orderSummaryContainer{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.orderSummary{
+    flex:1 50%;
+}
+
+.orderSummaryHeader,
+.orderSummaryDescription{
+    text-align: center;
+}
+.orderButtonsContainer{
+    padding:0 2.5rem;
+}

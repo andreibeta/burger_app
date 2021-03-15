@@ -4,8 +4,13 @@ import NavigationItems from '../NavigationItems/NavigationItems';
 import classes from './SideDrawer.module.css';
 import Backdrop from '../../UI/Backdrop/Backdrop';
 import Aux from '../../../hoc/Aux';
+import { useSelector } from 'react-redux';
 
-const sideDrawer = (props) => {
+
+function sideDrawer(props){
+    const isAuth = useSelector(state=>state.authentication);
+    
+
     let attachedClasses = [classes.SideDrawer, classes.Close];
     if(props.open){
         attachedClasses=[classes.SideDrawer, classes.Open];
@@ -18,7 +23,9 @@ const sideDrawer = (props) => {
             <Logo />
             </div>
             <nav>
-                <NavigationItems />
+                <NavigationItems
+                    isAuth={isAuth}
+                />
             </nav>
         </div>
         </Aux>
