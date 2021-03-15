@@ -1,7 +1,7 @@
 .BuildControls{
     width: 100%;
-    background-color: #703b09;
-    flex:1 50%;
+    background-color:$color-primary;
+    flex:1 100%;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -28,9 +28,11 @@
 
 .OrderButton:hover, .OrderButton:active {
     
-    background-color:#C0A172;
-    border: 1px solid #966909;
+    background-color:#e36607;
+    box-shadow: none;
     color:white;
+    transform: scaleX(1.05);
+    letter-spacing: .05rem;
 }
 
 .OrderButton:disabled{

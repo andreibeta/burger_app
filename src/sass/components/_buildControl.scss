@@ -1,22 +1,26 @@
 .BuildControl{
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: center;
     align-items: center;
-    margin: 5px 0;
+    margin:.1rem;
+    @media only screen and (min-width:$bp-largest) {
+        margin:1rem;
+    }
     &__Label{
-        padding: 10px;
+        padding: 1rem;
         font-weight: bold;
-        width: 80px;
+        width: 10rem;
     }
     &__Less{
-        background-color: #BA1315;
+        background-color: #E34040;
         color:white;
         border-radius: .5rem;
-        border:1px solid white;
+
     }
     &__Less:hover,
     &__Less:active{
-        background-color: #daa972;
+        background-color: #AB2E2E;
         color: white;
         transform: translateY(-5%);
         -webkit-box-shadow: 10px 10px 14px -9px rgba(0,0,0,0.75);
@@ -24,13 +28,14 @@
          box-shadow: 10px 10px 14px -9px rgba(0,0,0,0.75);
     }
     &__More{
-        background-color: #009135;
+        background-color: #53B859;
         color: white;
         border-radius: .5rem;
+        
     }
     &__More:hover,
     &__More:active{
-        background-color: #99703F;
+        background-color: #3C8540;
         color: white;
         transform: translateY(-5%);
         -webkit-box-shadow: 10px 10px 14px -9px rgba(0,0,0,0.75);
@@ -42,10 +47,10 @@
 .BuildControl button{
     display: block;
     font: inherit;
-    padding: 5px;
+    padding: .6rem;
     margin: 0 5px;
-    width: 80px;
-    border: .5px solid #AA6817;
+    width: 10rem;
+    border: .1rem solid white;
     cursor: pointer;
     outline: none;
 }

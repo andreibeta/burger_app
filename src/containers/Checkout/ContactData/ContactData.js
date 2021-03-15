@@ -6,6 +6,7 @@ import InputForm from '../../../components/UI/InputForm/InputForm';
 import { connect, useSelector } from 'react-redux';
 import withErrorHandler from '../../../hoc/withErrorHandler/withErrorHandler';
 import * as OrderActionCreators from '../../../store/actions/index';
+import Modal from '../../../components/UI/Modal/Modal';
 
 class ContactData extends Component{
     
@@ -92,6 +93,7 @@ class ContactData extends Component{
         },
         formIsValid: false,
     }
+    
     //submit method
     orderSubmitHandler = (event) => {
         event.preventDefault();
@@ -104,7 +106,8 @@ class ContactData extends Component{
             ingredients: this.props.ingr,
             price: this.props.price,
             orderData: formData,
-            userId: this.props.userId
+            userId: this.props.userId,
+            timeStamp:Date(Date.now()),
         }
 
         this.props.onOrderBurger(order, this.props.token);
@@ -177,10 +180,15 @@ class ContactData extends Component{
             form = <Spinner />
         }
         return(
+            <Modal show={true} size="lg" centered>
+            
+            <a href="/" className="closeTag" style={{cursor:"pointer",right:"5%"}}>&#10006;</a>
             <div className="ContactData">
                 <h4>Enter your contact data</h4>
                 {form}
             </div>
+            
+            </Modal>
         )
     }
 }

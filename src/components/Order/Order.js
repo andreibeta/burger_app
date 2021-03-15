@@ -22,6 +22,7 @@ const order = (props) => {
             <div className="Order__price">
             <h4>Price</h4>
             <p> <strong>USD {Number.parseFloat(props.price).toFixed(2)}</strong></p>
+            {/* <p>{props.timeStamp}</p> */}
             </div>
         </div>
     );
