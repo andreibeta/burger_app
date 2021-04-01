@@ -1,11 +1,11 @@
-This is a simple burger app, made with React & Redux.
-In this project you have the next features:
-    -login/register user
-    -you can build your own burger as you like
-    -you can make an order request after you finish to customize your own burger
-    -you can view your own orders in MyOrders section
-    -this is a desktop first app, but it is also resolution adaptive and can be used on a mobile device also 
-A live version of this project can be found on the link down below:
+This is a simple burger app, made with React & Redux.<br />
+In this project you have the next features:<br />
+    -login/register user<br />
+    -you can build your own burger as you like<br />
+    -you can make an order request after you finish to customize your own burger<br />
+    -you can view your own orders in MyOrders section<br />
+    -this is a desktop first app, but it is also resolution adaptive and can be used on a mobile device also <br />
+A live version of this project can be found on the link down below:<br />
     https://react-my-burger-b6392.web.app/
 
 
