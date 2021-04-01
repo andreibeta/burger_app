@@ -4,7 +4,8 @@ In this project you have the next features:<br />
     -you can build your own burger as you like<br />
     -you can make an order request after you finish to customize your own burger<br />
     -you can view your own orders in MyOrders section<br />
-    -this is a desktop first app, but it is also resolution adaptive and can be used on a mobile device also <br />
+    -this is a desktop first app, but it is also resolution adaptive and can be used on a mobile device <br />
+    -the database used for this project is firebase and also it was deployed through firebase hosting option  <br />
 A live version of this project can be found on the link down below:<br />
     https://react-my-burger-b6392.web.app/
 
